@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECG Upload</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card upload-card">
+        <h2>Upload ECG CSV</h2>
+
+        <label>Patient ID</label>
+        <input type="number" id="patientId" placeholder="Enter Patient ID" required>
+
+        <label>ECG CSV File</label>
+        <input type="file" id="ecgFile" accept=".csv" required>
+
+        <button onclick="uploadECG()">Upload & Analyze</button>
+    </div>
+</div>
+
+<script src="js/upload.js"></script>
+</body>
+</html>

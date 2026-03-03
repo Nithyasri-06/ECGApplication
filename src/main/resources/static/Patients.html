@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="top">
+    <h2>ECG Monitor</h2>
+</header>
+
+<!-- PAGE CONTENT -->
+<main class="container">
+
+    <section class="page-header">
+        <h1>Patient List</h1>
+        <p>All registered patients available for ECG analysis</p>
+    </section>
+
+    <section class="table-card">
+        <table class="patient-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Created At</th>
+            </tr>
+            </thead>
+
+            <tbody id="patientTable">
+            <!-- Loaded dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<div class="back-btn-container">
+    <button class="back-btn" onclick="goHome()">
+        ← Back to Home
+    </button>
+</div>
+
+
+<footer>
+    © 2026 ECG Management System
+</footer>
+
+<script src="/js/patients.js"></script>
+</body>
+</html>

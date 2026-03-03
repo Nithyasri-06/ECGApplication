@@ -1,4 +1,4 @@
-package com.ecg.ECGApplication.Model;
+package com.ecg.ECGApplication.Backend.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;

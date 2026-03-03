@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #020617;
+}
+
+/* HEADER */
+.top {
+    background: #020617;
+    color: #38bdf8;
+    padding: 18px 40px;
+    font-size: 20px;
+}
+
+/* MAIN */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #475569;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* TILE */
+.tile {
+    text-decoration: none;
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    color: inherit;
+}
+
+.tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.tile h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.tile p {
+    font-size: 15px;
+    color: #475569;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 70px;
+    text-align: center;
+    padding: 18px;
+    background: #020617;
+    color: #cbd5f5;
+}
+/* PAGE HEADER */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #475569;
+}
+
+/* TABLE CARD */
+.table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+/* TABLE */
+.patient-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.patient-table thead {
+    background: #020617;
+    color: white;
+}
+
+.patient-table th,
+.patient-table td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+.patient-table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.patient-table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+/* GENDER STYLE */
+.patient-table td:last-child {
+    font-weight: 600;
+    color: #0f172a;
+}
+/* Centered Back Button Container */
+.back-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* Back Button Styling */
+.back-btn {
+    background: #020617;
+     color: #38bdf8;
+
+    border: none;
+    padding: 14px 36px;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 180, 255, 0.35);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px rgba(0, 180, 255, 0.45);
+}
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f7fb;
+}
+
+/* Header */
+.navbar {
+    background: linear-gradient(135deg, #020b1d, #071b35);
+    padding: 18px 40px;
+    color: #00b4ff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Page Layout */
+.page-container {
+    max-width: 500px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form Card */
+.form-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* Form Fields */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Primary Button */
+.primary-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #00b4ff, #0077cc);
+    color: #fff;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+/* Success Message */
+.success-box {
+    margin-top: 25px;
+    color: #0a7c3e;
+    font-weight: 600;
+}
+
+/* Back Button */
+.back-btn-container {
+    margin-top: 40px;
+}
+
+.back-btn {
+    background: #0b1c2d;
+    color: #00b4ff;
+    border: 1px solid #00b4ff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    background: #00b4ff;
+    color: #fff;
+}
+/* Page Layout */
+.page-container {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Search */
+.search-box {
+    margin: 30px 0;
+}
+
+.search-box input {
+    padding: 12px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 12px 22px;
+    margin-left: 10px;
+    background: linear-gradient(135deg, #00b4ff, #0077cc);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Patient Card */
+.patient-card {
+    margin: 25px auto;
+    background: #f8fbff;
+    border-left: 5px solid #00b4ff;
+    padding: 18px;
+    width: 60%;
+    display: none;
+}
+
+/* Table */
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: white;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.records-table th {
+    background: #0b1c2d;
+    color: #00b4ff;
+    padding: 14px;
+}
+
+.records-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.records-table tr:hover {
+    background: #f2f9ff;
+}
+
+/* Prediction Badge */
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.badge.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge.done {
+    background: #d4edda;
+    color: #155724;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f8;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-box button:hover {
+    background-color: #2980b9;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.records-table th, .records-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.records-table th {
+    background-color: #3498db;
+    color: white;
+}
+
+.records-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* NAVBAR (optional, looks professional) */
+.navbar {
+    background: #0f172a;
+    color: #fff;
+    padding: 16px 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* COMMON CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* CARD STYLE */
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* BUTTON */
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* INPUTS */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    margin-bottom: 15px;
+}
+.upload-card {
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+.upload-card h2 {
+    margin-bottom: 20px;
+}
+.result-card h2 {
+    margin-bottom: 15px;
+}
+
+/* Result info grid */
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 18px;
+}
+
+/* Chart card */
+.chart-card {
+    margin-top: 25px;
+    height: 420px;
+    padding: 20px;
+}
+
+/* Make chart responsive */
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+

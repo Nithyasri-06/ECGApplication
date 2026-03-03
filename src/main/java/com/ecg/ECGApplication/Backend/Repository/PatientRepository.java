@@ -1,6 +1,6 @@
-package com.ecg.ECGApplication.Repository;
+package com.ecg.ECGApplication.Backend.Repository;
 
-import com.ecg.ECGApplication.Model.Patient;
+import com.ecg.ECGApplication.Backend.Model.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

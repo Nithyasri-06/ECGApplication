@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECG Management System</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">🫀 ECG Monitor</div>
+    <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="patients.html">Patients</a></li>
+        <li><a href="ecg-upload.html">Upload ECG</a></li>
+        <li><a href="ecg-records.html">Records</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>ECG Management System</h1>
+        <p>
+
+            A remote ECG monitoring platform for managing patients and visualizing cardiac signals efficiently.
+        </p>
+
+    </div>
+</section>
+
+<!-- DASHBOARD CARDS -->
+<section class="dashboard">
+    <div class="card" onclick="location.href='patients.html'">
+        <div class="icon">👤</div>
+        <h3>Patients</h3>
+        <p>View and manage registered patients</p>
+    </div>
+
+    <div class="card" onclick="location.href='add-patient.html'">
+        <div class="icon">➕</div>
+        <h3>Add Patient</h3>
+        <p>Register new patients securely</p>
+    </div>
+
+    <div class="card" onclick="location.href='ecg-upload.html'">
+        <div class="icon">📤</div>
+        <h3>Upload ECG</h3>
+        <p>Upload ECG signals for analysis</p>
+    </div>
+
+    <div class="card" onclick="location.href='ecg-records.html'">
+        <div class="icon">📊</div>
+        <h3>ECG Records</h3>
+        <p>Analyze ECG results and history</p>
+    </div>
+</section>
+
+
+<footer>
+    © 2026 ECG Management System
+</footer>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
-package com.ecg.ECGApplication.Service;
+package com.ecg.ECGApplication.Backend.Service;
 
-import com.ecg.ECGApplication.dto.PatientRequest;
-import com.ecg.ECGApplication.dto.PatientResponse;
+import com.ecg.ECGApplication.Backend.dto.PatientRequest;
+import com.ecg.ECGApplication.Backend.dto.PatientResponse;
 
 import java.util.List;
 

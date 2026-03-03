@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECG Records</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">ECG Monitor</div>
+</div>
+
+<div class="page-container">
+    <h2>Patient ECG Records</h2>
+    <p class="subtitle">Search ECG analysis by Patient ID</p>
+
+    <div class="search-box">
+        <input type="number" id="patientId" placeholder="Enter Patient ID">
+        <button onclick="loadECG()">Search</button>
+    </div>
+
+    <div id="patientInfo" class="patient-card"></div>
+
+    <table class="records-table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Patient Name</th>
+            <th>ECG File</th>
+            <th>Uploaded At</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="recordsBody"></tbody>
+    </table>
+</div>
+
+<div class="back-btn-container">
+    <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<script src="js/ecg-record.js"></script>
+</body>
+</html>

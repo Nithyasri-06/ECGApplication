@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECG Result</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h2>ECG Analysis Result</h2>
+
+        <p><b>Heart Rate:</b> <span id="heartRate"></span></p>
+        <p><b>Rhythm:</b> <span id="condition"></span></p>
+        <p><b>Beat Type:</b> <span id="beatType"></span></p>
+        <p><b>Confidence:</b> <span id="confidence"></span></p>
+        <p><b>Cardiac Status:</b> <span id="status"></span></p>
+        <p><b>Risk Level:</b> <span id="risk"></span></p>
+        <p><b>Recommendation:</b> <span id="recommendation"></span></p>
+
+        <canvas id="ecgChart"></canvas>
+    </div>
+</div>
+<div class="back-btn-container">
+    <button class="back-btn" onclick="goHome()">← Back to Home</button>
+</div>
+
+<script src="js/result.js"></script>
+</body>
+</html>

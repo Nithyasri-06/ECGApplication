@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Patient</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Top Header -->
+<div class="navbar">
+    <div class="logo">ECG Monitor</div>
+</div>
+
+<!-- Page Content -->
+<div class="page-container">
+
+    <h2>Add New Patient</h2>
+    <p class="subtitle">Enter patient details for ECG analysis</p>
+
+    <div class="form-card">
+        <form id="patientForm">
+            <div class="form-group">
+                <label>Patient Name</label>
+                <input type="text" id="name" placeholder="Enter full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" id="age" placeholder="Enter age" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <select id="gender" required>
+                    <option value="">Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+            <button type="submit" class="primary-btn">
+                Save Patient
+            </button>
+        </form>
+
+        <div id="msg" class="success-box"></div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-btn-container">
+        <button class="back-btn" onclick="goHome()">← Back to Home</button>
+    </div>
+
+</div>
+
+<script src="js/add-patient.js"></script>
+</body>
+</html>

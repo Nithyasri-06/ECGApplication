@@ -1,10 +1,10 @@
-package com.ecg.ECGApplication.Service.implementation;
+package com.ecg.ECGApplication.Backend.Service.implementation;
 
-import com.ecg.ECGApplication.Model.Patient;
-import com.ecg.ECGApplication.Repository.PatientRepository;
-import com.ecg.ECGApplication.Service.PatientService;
-import com.ecg.ECGApplication.dto.PatientRequest;
-import com.ecg.ECGApplication.dto.PatientResponse;
+import com.ecg.ECGApplication.Backend.Model.Patient;
+import com.ecg.ECGApplication.Backend.Repository.PatientRepository;
+import com.ecg.ECGApplication.Backend.Service.PatientService;
+import com.ecg.ECGApplication.Backend.dto.PatientRequest;
+import com.ecg.ECGApplication.Backend.dto.PatientResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +24,7 @@ public class PatientImpl implements PatientService {
             res.setName(p.getName());
             res.setAge(p.getAge());
             res.setGender(p.getGender());
+            res.setCreatedAt(p.getCreatedAt());
             return res;
         }).collect(Collectors.toList());
     }

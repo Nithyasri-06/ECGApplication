@@ -1,9 +1,8 @@
-package com.ecg.ECGApplication.Controller;
+package com.ecg.ECGApplication.Backend.Controller;
 
-import com.ecg.ECGApplication.Service.PatientService;
-import com.ecg.ECGApplication.dto.PatientRequest;
-import com.ecg.ECGApplication.dto.PatientResponse;
-import lombok.AllArgsConstructor;
+import com.ecg.ECGApplication.Backend.Service.PatientService;
+import com.ecg.ECGApplication.Backend.dto.PatientRequest;
+import com.ecg.ECGApplication.Backend.dto.PatientResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

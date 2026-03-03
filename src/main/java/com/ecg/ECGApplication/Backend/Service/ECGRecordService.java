@@ -159,7 +159,7 @@ public class ECGRecordService {
                 response.setAnalysis(null);
             }
 
-            // ❌ DO NOT SEND SIGNAL HERE (VERY IMPORTANT)
+
             response.setSignal(null);
 
             return response;

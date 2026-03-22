@@ -1,32 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>ECG Result</title>
+    <title>ECG Clinical Report</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
+
 <body>
 
-<div class="container">
-    <div class="card">
-        <h2>ECG Analysis Result</h2>
 
-        <p><b>Heart Rate:</b> <span id="heartRate"></span></p>
-        <p><b>Rhythm:</b> <span id="condition"></span></p>
-        <p><b>Beat Type:</b> <span id="beatType"></span></p>
-        <p><b>Confidence:</b> <span id="confidence"></span></p>
-        <p><b>Cardiac Status:</b> <span id="status"></span></p>
-        <p><b>Risk Level:</b> <span id="risk"></span></p>
-        <p><b>Recommendation:</b> <span id="recommendation"></span></p>
+
+<div class="report-container" id="report">
+
+    <!-- HEADER -->
+
+    <div class="report-header">
+
+        <h2>Electrocardiogram (ECG) Report</h2>
+    </div>
+
+    <!-- PATIENT DETAILS -->
+
+    <div class="section">
+        <h3>Patient Information</h3>
+
+        <div class="patient-grid">
+
+            <p><strong>Patient ID:</strong> <span id="patientId"></span></p>
+            <p><strong>Date:</strong> <span id="reportDate"></span></p>
+
+        </div>
+
+    </div>
+
+    <!-- ECG SUMMARY -->
+
+    <div class="section">
+
+        <h3>ECG Summary</h3>
+
+        <table>
+
+            <tr>
+                <td>Heart Rate</td>
+                <td id="heartRate"></td>
+            </tr>
+
+            <tr>
+                <td>Rhythm</td>
+                <td id="rhythm"></td>
+            </tr>
+
+            <tr>
+                <td>Total Beats</td>
+                <td id="totalBeats"></td>
+            </tr>
+
+            <tr>
+                <td>Abnormal Beats</td>
+                <td id="abnormalBeats"></td>
+            </tr>
+            <!--
+            <tr>
+                <td>Model Confidence</td>
+                <td id="confidence"></td>
+            </tr>
+            -->
+            <tr>
+                <td>Beat Distribution</td>
+                <td id="beatDistribution"></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- CLINICAL INTERPRETATION -->
+
+    <div class="section">
+
+        <h3>Clinical Interpretation</h3>
+
+        <p><b>Cardiac Status :</b> <span id="status"></span></p>
+
+        <p><b>Risk Level :</b>
+            <span id="risk" ></span>
+        </p>
+
+        <p><b>Clinical Findings :</b>
+            <span id="findings">
+
+</span>
+        </p>
+
+        <p><b>Recommendation :</b>
+            <span id="recommendation">
+
+</span>
+        </p>
+
+    </div>
+
+    <!-- ECG GRAPH -->
+
+    <div class="section">
+
+        <h3>ECG Signal</h3>
 
         <canvas id="ecgChart"></canvas>
+
     </div>
+
+    <!-- FOOTER -->
+
+    <div class="report-footer">
+
+        <p>Doctor Signature : _______________________</p>
+        <p>Date : _______________________</p>
+
+    </div>
+
 </div>
-<div class="back-btn-container">
-    <button class="back-btn" onclick="goHome()">← Back to Home</button>
+<br>
+<br>
+<div class="top-bar">
+    <button onclick="downloadPDF()" class="download-btn">
+        Download ECG Report (PDF)
+    </button>
 </div>
 
+<div class="back-btn-container"> <button class="back-btn" onclick="goHome()">← Back to Home</button> </div>
+
 <script src="js/result.js"></script>
+
+<script>
+    function downloadPDF() {
+
+    const element = document.getElementById("report");
+
+    html2canvas(element, {
+        scale: 3,
+        useCORS: true
+    }).then(canvas => {
+
+        const imgData = canvas.toDataURL("image/jpeg", 1.0);
+
+        const pdf = new jspdf.jsPDF('p', 'mm', 'a4');
+
+        const pageWidth = 210;  // A4 width in mm
+        const pageHeight = 297;
+
+        // Calculate image height to maintain ratio
+        const imgWidth = pageWidth;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
+
+        pdf.save("ECG_Report.pdf");
+    });
+}
+
+</script>
+
 </body>
 </html>

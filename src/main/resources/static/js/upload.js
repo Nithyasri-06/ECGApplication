@@ -7,6 +7,7 @@ async function uploadECG() {
         return;
     }
 
+
     const file = fileInput.files[0];
     const formData = new FormData();
     formData.append("file", file);
@@ -32,9 +33,10 @@ async function uploadECG() {
 
         // ==================== LIMIT SIGNAL FOR LOCALSTORAGE ====================
         const fs = data.samplingRate || 360;               // sampling rate
-        const limitedSignal = data.signal.slice(0, fs * 2); // first 2 seconds only
+        const limitedSignal = data.signal.slice(0, fs * 3);
 
         const storeData = {
+            patientId: patientId,
             analysis: data.analysis,
             signal: limitedSignal,           // small slice for chart
             samplingRate: data.samplingRate,

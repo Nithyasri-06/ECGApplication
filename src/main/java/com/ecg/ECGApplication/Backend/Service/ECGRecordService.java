@@ -60,6 +60,7 @@ public class ECGRecordService {
             record.setFilePath(filePath.toString());
             record.setUploadedAt(LocalDateTime.now());
             record.setPatient(patient);
+
             ecgRepository.save(record);
 
             // ==================== READ CSV INTO SIGNAL ====================
@@ -125,6 +126,7 @@ public class ECGRecordService {
             response.put("analysis", Map.of("error", e.getMessage()));
         }
 
+
         return response;
     }
 
@@ -178,6 +180,8 @@ public class ECGRecordService {
         response.setPatientId(record.getPatient().getId());
         response.setFileName(record.getFileName());
         response.setUploadedAt(record.getUploadedAt());
+
+
 
         try {
             Map<String, Object> json =

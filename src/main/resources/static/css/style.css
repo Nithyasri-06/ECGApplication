@@ -512,6 +512,7 @@ input[type="file"] {
 
 /* Chart card */
 .chart-card {
+    width: 100%
     margin-top: 25px;
     height: 420px;
     padding: 20px;
@@ -520,6 +521,198 @@ input[type="file"] {
 /* Make chart responsive */
 canvas {
     width: 100% !important;
-    height: 100% !important;
+    height: 350px !important;
 }
+
+body{
+
+font-family: Arial, Helvetica, sans-serif;
+background:#f4f6f9;
+margin:0;
+padding:20px;
+
+}
+
+/* Top Download Button */
+
+.top-bar{
+
+text-align:center;
+margin-bottom:20px;
+
+}
+
+.download-btn{
+
+background:#1e88e5;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+
+}
+
+.download-btn:hover{
+
+background:#1565c0;
+
+}
+
+/* REPORT CONTAINER */
+
+.report-container{
+
+width:900px;
+margin:auto;
+background:white;
+padding:40px;
+box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+
+}
+
+/* HEADER */
+
+.report-header{
+
+text-align:center;
+border-bottom:2px solid #333;
+padding-bottom:10px;
+margin-bottom:20px;
+
+}
+
+.report-header h1{
+
+margin:0;
+font-size:28px;
+text-align:center;
+
+}
+
+.report-header h2{
+
+margin:5px;
+color:#555;
+text-align:center;
+
+}
+
+/* SECTION */
+
+.section{
+
+margin-top:25px;
+
+}
+
+h3{
+
+border-bottom:1px solid #ccc;
+padding-bottom:5px;
+color:#333;
+
+}
+
+/* PATIENT GRID */
+
+.patient-grid{
+
+display:flex;
+justify-content:space-between;
+margin-top:10px;
+
+}
+
+/* TABLE */
+
+table{
+
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+
+
+}
+
+td{
+
+border:1px solid #ccc;
+padding:10px;
+
+}
+
+td:first-child{
+
+font-weight:bold;
+background:#f2f2f2;
+width:40%;
+
+}
+
+/* RISK LEVEL */
+
+.risk{
+
+color:red;
+font-weight:bold;
+
+}
+
+/* GRAPH */
+
+canvas{
+
+margin-top:15px;
+
+}
+
+/* FOOTER */
+
+.report-footer{
+
+margin-top:40px;
+border-top:2px solid #333;
+padding-top:20px;
+
+}
+
+/* PRINT MODE */
+
+@media print {
+
+.download-btn{
+display:none;
+}
+
+body{
+background:white;
+}
+
+.report-container {
+    width: 794px;   /* exact A4 width in px */
+    min-height: 1123px; /* A4 height */
+    transform: scale(0.85);   /* 🔥 adjust this */
+    transform-origin: top left;
+}
+
+/* Prevent bad page breaks */
+.section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Chart size fix */
+#ecgChart {
+    width: 100% !important;
+    height: 350px !important;
+}
+.section canvas {
+    max-width: 100%;
+
+}
+
+
+
 
